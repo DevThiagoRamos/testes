@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Product } from '../types';
 import Carousel from './Carousel';
 
@@ -9,6 +9,9 @@ interface VitrineProps {
 }
 
 const Vitrine: React.FC<VitrineProps> = ({ title, products, onProductClick }) => {
+
+  const [activeTag, setActiveTag] = useState("CELULARES");
+
   return (
     <section className="vitrini">
       <div className="vitrini-header">
@@ -18,15 +21,22 @@ const Vitrine: React.FC<VitrineProps> = ({ title, products, onProductClick }) =>
       </div>
 
       <div className="total_tags">
-        <a href="#celulares"><button type="button" className="tags"> CELULARES </button></a>
-        <a href="#acessorios"><button type="button" className="tags"> ACESSÓRIOS </button></a>
-        <a href="#tablets"><button type="button" className="tags"> TABLETS </button></a>
-        <a href="#notebooks"><button type="button" className="tags"> NOTEBOOKS </button></a>
-        <a href="#tvs"><button type="button" className="tags"> TVS </button></a>
-        <a href="#todos"><button type="button" className="tags"> VER TODOS</button></a>
+        {["CELULARES","ACESSÓRIOS","TABLETS","NOTEBOOKS","TVS","VER TODOS"]
+          .map(tag => (
+            <button
+              key={tag}
+              className={`tags ${activeTag === tag ? "active" : ""}`}
+              onClick={() => setActiveTag(tag)}
+            >
+              {tag}
+            </button>
+        ))}
       </div>
 
-      <Carousel products={products} onProductClick={onProductClick} />
+      <Carousel 
+        products={products} 
+        onProductClick={onProductClick} 
+      />
     </section>
   );
 };

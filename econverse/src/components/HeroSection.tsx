@@ -7,9 +7,11 @@ const HeroSection: React.FC = () => {
 
       <div className="sale_text">
         <h2>Venha conhecer nossas promoções</h2>
-        <span> 50% Off </span>
-        <span> nos produtos</span>
-        <a href="#see_all"> Ver produtos </a>
+      <div className="discount_line">
+        <span>50% Off</span>
+        <span>nos produtos</span>
+      </div>
+      <a href="#see_all"> Ver produtos </a>
       </div>
     </section>
   );

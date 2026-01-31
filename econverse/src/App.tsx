@@ -9,6 +9,7 @@ import Partners from './components/Partners';
 import Brands from './components/Brands';
 import Footer from './components/Footer';
 import ProductModal from './components/ProductModal';
+import Vitrine2 from './components/Vitrine2';
 
 const App: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -54,14 +55,14 @@ const App: React.FC = () => {
         onProductClick={handleProductClick}
       />
       <Partners />
-      <Vitrine
+      <Vitrine2
         title="Produtos relacionados"
         products={products}
         onProductClick={handleProductClick}
       />
       <Partners />
       <Brands />
-      <Vitrine
+      <Vitrine2
         title="Produtos relacionados"
         products={products}
         onProductClick={handleProductClick}

@@ -32,6 +32,7 @@ econverse/
 │   │   ├── HeroSection.tsx         # Banner "Venha conhecer..."
 │   │   ├── Categories.tsx          # Grid de 7 categorias
 │   │   ├── Vitrine.tsx             # Container com tags + carrossel
+│   │   ├── Vitrine2.tsx            # Container + carrossel
 │   │   ├── Carousel.tsx            # Lógica de navegação
 │   │   ├── ProductCard.tsx         # Card individual do produto
 │   │   ├── ProductModal.tsx        # Modal de detalhes (ao clicar)

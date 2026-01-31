@@ -9,11 +9,19 @@ const Footer: React.FC = () => {
           <p> Assine a nossa newsletter e receba as novidades e conteúdos exclusivos da Ecoverse</p>
         </div>
 
-        <div className="form">
+      <div className="form">
+        <div className="inputs_row">
           <input type="text" className="name" placeholder="Digite seu nome" />
           <input type="email" className="email" placeholder="Digite seu e-mail" />
           <button type="button" className="subscribe_button"> INSCREVER-SE </button>
         </div>
+
+        <label className="terms">
+          <input type="checkbox" />
+          Aceito os termos e condições
+        </label>
+      </div>
+        
       </section>
 
       <section className="footer_2">
